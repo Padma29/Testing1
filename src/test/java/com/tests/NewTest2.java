@@ -19,14 +19,15 @@ public class NewTest2 {
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Softwares\\chromedriver.exe");
 		driver=new ChromeDriver();
-		driver.get("http://newtours.demoaut.com/");
+		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
 		
-		driver.findElement(By.name("userName")).sendKeys("remi");
-		driver.findElement(By.name("password")).sendKeys("remi");
-		driver.findElement(By.name("login")).click();
-		String title=driver.getTitle();
-		Assert.assertEquals(title, "Find a Flight: Mercury Tours:");
+		driver.findElement(By.id("lst-ib")).sendKeys("selenium");
+                driver.findElement(By.name("btnK")).click();
+
+		
+		/*String title=driver.getTitle();
+		Assert.assertEquals(title, "Find a Flight: Mercury Tours:");*/
 	
 		
 	}
